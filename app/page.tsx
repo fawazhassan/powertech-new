@@ -189,25 +189,23 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <a href={product.url} target="_blank" rel="noopener noreferrer">
-                  <Card className="h-full hover:shadow-lg transition-all cursor-pointer">
+                  <Card className={`h-full hover:shadow-2xl transition-all cursor-pointer bg-gradient-to-br ${product.color} text-white border-0`}>
                     <CardHeader>
-                      <div className={`mb-4 w-20 h-20 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center p-1`}>
-                        <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-2">
-                          <div className="relative w-full h-full">
-                            <Image
-                              src={product.logo}
-                              alt={product.name}
-                              fill
-                              className="object-contain"
-                            />
-                          </div>
+                      <div className="mb-4 w-20 h-20 mx-auto rounded-xl bg-white flex items-center justify-center p-3">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={product.logo}
+                            alt={product.name}
+                            fill
+                            className="object-contain"
+                          />
                         </div>
                       </div>
-                      <CardTitle className="text-gray-900">{product.name}</CardTitle>
-                      <CardDescription>{product.description}</CardDescription>
+                      <CardTitle className="text-white text-center">{product.name}</CardTitle>
+                      <CardDescription className="text-white/90 text-center">{product.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex items-center text-sm text-primary font-medium">
+                      <div className="flex items-center justify-center text-sm text-white font-medium">
                         Visit Site <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </CardContent>
