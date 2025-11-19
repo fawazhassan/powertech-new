@@ -1,0 +1,15 @@
+# robots.txt for PowerTech Digital
+# https://powertech.digital
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://powertech.digital/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Disallow access to certain directories
+Disallow: /api/
+Disallow: /_next/static/
