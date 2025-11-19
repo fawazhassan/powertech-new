@@ -11,7 +11,7 @@ export default function ProductsPage() {
   const products = [
     {
       name: "talent.voxle.ai",
-      url: "https://talent.voxle.ai",
+      url: "https://talent.voxle.ai?utm_source=ptd",
       tagline: "AI-Powered Recruitment Platform",
       description:
         "Stop losing top talent to lengthy hiring processes and inconsistent candidate evaluations. Our intelligent platform combines data-driven CV screening, AI-powered interviews, and talent validation to help you build exceptional teams faster and more confidently.",
@@ -27,7 +27,7 @@ export default function ProductsPage() {
     },
     {
       name: "furnishly.app",
-      url: "https://furnishly.app",
+      url: "https://furnishly.app?utm_source=ptd",
       tagline: "AI Product Photography",
       description:
         "Transform simple product shots into stunning lifestyle images that boost sales and conversions. Generate professional homeware photography in under 60 seconds.",
@@ -43,7 +43,7 @@ export default function ProductsPage() {
     },
     {
       name: "stagently.com",
-      url: "https://stagently.com",
+      url: "https://stagently.com?utm_source=ptd",
       tagline: "AI Virtual Staging",
       description:
         "Transform empty rooms into beautifully staged spaces that sell faster and for more. AI-powered virtual staging in under 60 seconds with MLS-acceptable results.",

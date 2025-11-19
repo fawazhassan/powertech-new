@@ -161,21 +161,21 @@ export default function Home() {
             {[
               {
                 name: "talent.voxle.ai",
-                url: "https://talent.voxle.ai",
+                url: "https://talent.voxle.ai?utm_source=ptd",
                 description: "AI-Powered Recruitment Platform",
                 logo: "/assets/images/voxle-logo.png",
                 color: "from-[#8b5cf6] to-[#7c3aed]",
               },
               {
                 name: "furnishly.app",
-                url: "https://furnishly.app",
+                url: "https://furnishly.app?utm_source=ptd",
                 description: "AI Product Photography",
                 logo: "/assets/images/furnishly-logo.png",
                 color: "from-[#6b7280] to-[#4b5563]",
               },
               {
                 name: "stagently.com",
-                url: "https://stagently.com",
+                url: "https://stagently.com?utm_source=ptd",
                 description: "AI Virtual Staging",
                 logo: "/assets/images/stagently-logo.png",
                 color: "from-[#d13976] to-[#a82d5e]",
