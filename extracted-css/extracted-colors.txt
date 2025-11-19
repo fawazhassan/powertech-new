@@ -1,0 +1,275 @@
+Colors found in index-CXuJiyaH.css:
+#e5e7eb
+#9ca3af
+#fff
+#6b7280
+#0000
+#2563eb
+rgb(59 130 246 / .5)
+rgb(var(--tw-prose-kbd-shadows)
+#374151
+#111827
+#4b5563
+#d1d5db
+#1f2937
+#f3f4f6
+rgb(0 0 0 / 50%)
+#059669
+#10b981
+rgb(167 243 208 / var(--tw-divide-opacity)
+#34D399
+rgb(52 211 153 / var(--tw-border-opacity)
+#F87171
+rgb(248 113 113 / var(--tw-border-opacity)
+rgb(245 158 11 / var(--tw-border-opacity)
+rgb(0 0 0 / var(--tw-border-opacity)
+rgb(167 243 208 / var(--tw-border-opacity)
+rgb(110 231 183 / var(--tw-border-opacity)
+rgb(16 185 129 / var(--tw-border-opacity)
+rgb(243 244 246 / var(--tw-border-opacity)
+rgb(229 231 235 / var(--tw-border-opacity)
+rgb(209 213 219 / var(--tw-border-opacity)
+rgb(60 80 224 / var(--tw-border-opacity)
+rgb(243 232 255 / var(--tw-border-opacity)
+rgb(192 132 252 / var(--tw-border-opacity)
+rgb(147 51 234 / var(--tw-border-opacity)
+rgb(128 202 238 / var(--tw-border-opacity)
+rgb(226 232 240 / var(--tw-border-opacity)
+rgb(255 167 11 / var(--tw-border-opacity)
+rgb(255 255 255 / var(--tw-border-opacity)
+rgb(60 80 224 / var(--tw-bg-opacity)
+rgb(255 255 255 / var(--tw-bg-opacity)
+#0FADCF
+rgb(15 173 207 / var(--tw-bg-opacity)
+rgb(16 185 129 / var(--tw-bg-opacity)
+rgb(52 211 153 / var(--tw-bg-opacity)
+#6577F3
+rgb(101 119 243 / var(--tw-bg-opacity)
+#8FD0EF
+rgb(143 208 239 / var(--tw-bg-opacity)
+rgb(248 113 113 / var(--tw-bg-opacity)
+#f5f0ff
+rgb(245 240 255 / var(--tw-bg-opacity)
+rgb(255 251 235 / var(--tw-bg-opacity)
+rgb(0 0 0 / var(--tw-bg-opacity)
+#000000
+#93c5fd
+rgb(209 250 229 / var(--tw-bg-opacity)
+rgb(167 243 208 / var(--tw-bg-opacity)
+#6ee7b7
+rgb(236 253 245 / var(--tw-bg-opacity)
+rgb(5 150 105 / var(--tw-bg-opacity)
+rgb(229 231 235 / var(--tw-bg-opacity)
+rgb(249 250 251 / var(--tw-bg-opacity)
+rgb(55 65 81 / var(--tw-bg-opacity)
+rgb(31 41 55 / var(--tw-bg-opacity)
+rgb(220 252 231 / var(--tw-bg-opacity)
+rgb(240 253 244 / var(--tw-bg-opacity)
+rgb(220 53 69 / var(--tw-bg-opacity)
+rgb(239 242 247 / var(--tw-bg-opacity)
+rgb(49 61 74 / var(--tw-bg-opacity)
+rgb(216 180 254 / var(--tw-bg-opacity)
+rgb(250 245 255 / var(--tw-bg-opacity)
+rgb(168 85 247 / var(--tw-bg-opacity)
+rgb(254 226 226 / var(--tw-bg-opacity)
+rgb(254 242 242 / var(--tw-bg-opacity)
+rgb(128 202 238 / var(--tw-bg-opacity)
+rgb(226 232 240 / var(--tw-bg-opacity)
+#5eead4
+rgb(255 167 11 / var(--tw-bg-opacity)
+#ffffff
+rgb(245 247 253 / var(--tw-bg-opacity)
+rgb(254 249 195 / var(--tw-bg-opacity)
+rgb(254 252 232 / var(--tw-bg-opacity)
+#ff80b5
+rgb(255 128 181 / 0)
+#d1fae5
+rgb(209 250 229 / 0)
+#a7f3d0
+rgb(167 243 208 / 0)
+#ecfdf5
+rgb(236 253 245 / 0)
+rgb(16 185 129 / 0)
+#9333ea
+rgb(147 51 234 / 0)
+rgb(88 28 135 / .1)
+rgb(88 28 135 / 0)
+rgb(255 255 255 / 0)
+rgb(0 0 0 / 0)
+#9089fc
+#0891b2
+rgb(22 78 99 / .1)
+#ccfbf1
+#99f6e4
+#2dd4bf
+#f0fdfa
+#14b8a6
+#259ae6
+#3c50e0
+rgb(255 255 255 / var(--tw-text-opacity)
+#9D5425
+rgb(157 84 37 / var(--tw-text-opacity)
+#B45454
+rgb(180 84 84 / var(--tw-text-opacity)
+#CD5D5D
+rgb(205 93 93 / var(--tw-text-opacity)
+#D0915C
+rgb(208 145 92 / var(--tw-text-opacity)
+rgb(245 158 11 / var(--tw-text-opacity)
+rgb(180 83 9 / var(--tw-text-opacity)
+rgb(146 64 14 / var(--tw-text-opacity)
+rgb(0 0 0 / var(--tw-text-opacity)
+rgb(100 116 139 / var(--tw-text-opacity)
+rgb(222 228 238 / var(--tw-text-opacity)
+rgb(138 153 175 / var(--tw-text-opacity)
+rgb(16 185 129 / var(--tw-text-opacity)
+rgb(5 150 105 / var(--tw-text-opacity)
+rgb(4 120 87 / var(--tw-text-opacity)
+rgb(6 95 70 / var(--tw-text-opacity)
+rgb(6 78 59 / var(--tw-text-opacity)
+rgb(156 163 175 / var(--tw-text-opacity)
+rgb(107 114 128 / var(--tw-text-opacity)
+rgb(75 85 99 / var(--tw-text-opacity)
+rgb(55 65 81 / var(--tw-text-opacity)
+rgb(17 24 39 / var(--tw-text-opacity)
+rgb(22 101 52 / var(--tw-text-opacity)
+rgb(220 53 69 / var(--tw-text-opacity)
+rgb(37 154 230 / var(--tw-text-opacity)
+rgb(240 149 12 / var(--tw-text-opacity)
+rgb(60 80 224 / var(--tw-text-opacity)
+rgb(168 85 247 / var(--tw-text-opacity)
+rgb(220 38 38 / var(--tw-text-opacity)
+rgb(153 27 27 / var(--tw-text-opacity)
+rgb(128 202 238 / var(--tw-text-opacity)
+rgb(71 85 105 / var(--tw-text-opacity)
+rgb(30 41 59 / var(--tw-text-opacity)
+rgb(234 179 8 / var(--tw-text-opacity)
+rgb(133 77 14 / var(--tw-text-opacity)
+rgb(0 0 0 / .1)
+rgb(0 0 0 / .25)
+rgba(0, 0, 0, .12)
+rgba(0, 0, 0, .07)
+rgb(0 0 0 / .05)
+rgba(0, 0, 0, .2)
+#FFFFFF
+rgba(0, 0, 0, .1)
+rgb(167 243 208 / var(--tw-ring-opacity)
+rgb(110 231 183 / var(--tw-ring-opacity)
+rgb(16 185 129 / .2)
+rgb(17 24 39 / .1)
+rgb(226 232 240 / var(--tw-ring-opacity)
+rgb(174 183 192 / var(--tw-text-opacity)
+#64748b
+#aeb7c0
+#e2e8f0
+#2e3a47
+rgb(46 58 71 / var(--tw-border-opacity)
+rgb(36 48 63 / var(--tw-bg-opacity)
+rgb(49 61 74 / var(--tw-border-opacity)
+rgb(36 48 63 / var(--tw-border-opacity)
+#313D4A
+rgb(0 0 0 / 8%)
+#EEEEEE
+rgb(238 238 238 / var(--tw-bg-opacity)
+#a855f7
+rgb(4 120 87 / var(--tw-bg-opacity)
+rgb(243 244 246 / var(--tw-bg-opacity)
+rgb(243 232 255 / var(--tw-bg-opacity)
+rgb(192 132 252 / var(--tw-bg-opacity)
+rgb(147 51 234 / var(--tw-bg-opacity)
+rgb(5 150 105 / 0)
+rgb(168 85 247 / 0)
+#06b6d4
+#047857
+#0d9488
+rgb(217 119 6 / var(--tw-text-opacity)
+rgb(211 64 83 / var(--tw-text-opacity)
+rgb(185 28 28 / var(--tw-text-opacity)
+rgb(127 29 29 / var(--tw-text-opacity)
+rgba(0, 0, 0, .08)
+rgb(16 185 129 / var(--tw-ring-opacity)
+rgb(16 185 129 / .5)
+rgb(216 180 254 / var(--tw-ring-opacity)
+#34d399
+rgb(4 120 87 / var(--tw-divide-opacity)
+rgb(4 120 87 / var(--tw-border-opacity)
+rgb(61 77 96 / var(--tw-border-opacity)
+rgb(75 85 99 / var(--tw-border-opacity)
+rgb(55 65 81 / var(--tw-border-opacity)
+rgb(31 41 55 / var(--tw-border-opacity)
+#1B1B24
+rgb(27 27 36 / var(--tw-bg-opacity)
+#5A616B
+rgb(90 97 107 / var(--tw-bg-opacity)
+#78350f
+rgb(26 34 44 / var(--tw-bg-opacity)
+rgb(6 78 59 / var(--tw-bg-opacity)
+#064e3b
+rgb(29 42 57 / var(--tw-bg-opacity)
+rgb(156 163 175 / var(--tw-bg-opacity)
+rgb(17 24 39 / var(--tw-bg-opacity)
+rgb(20 83 45 / var(--tw-bg-opacity)
+rgb(113 63 18 / var(--tw-bg-opacity)
+#1A222C
+rgb(26 34 44 / 0)
+rgb(6 78 59 / 0)
+rgb(31 41 55 / 0)
+rgb(17 24 39 / 0)
+rgb(88 28 135 / .2)
+#24303F
+rgb(22 78 99 / .2)
+rgb(6 78 59 / .2)
+rgb(6 78 59 / .3)
+#134e4a
+#000
+rgb(52 211 153 / var(--tw-text-opacity)
+rgb(253 230 138 / var(--tw-text-opacity)
+rgb(252 211 77 / var(--tw-text-opacity)
+rgb(209 250 229 / var(--tw-text-opacity)
+rgb(167 243 208 / var(--tw-text-opacity)
+rgb(229 231 235 / var(--tw-text-opacity)
+rgb(209 213 219 / var(--tw-text-opacity)
+rgb(249 250 251 / var(--tw-text-opacity)
+rgb(187 247 208 / var(--tw-text-opacity)
+rgb(192 132 252 / var(--tw-text-opacity)
+rgb(254 240 138 / var(--tw-text-opacity)
+rgb(243 244 246 / .1)
+rgb(55 65 81 / var(--tw-ring-opacity)
+rgb(31 41 55 / var(--tw-ring-opacity)
+rgb(255 255 255 / .1)
+rgb(75 85 99 / var(--tw-bg-opacity)
+rgb(254 243 199 / var(--tw-text-opacity)
+rgb(110 231 183 / var(--tw-text-opacity)
+rgb(52 211 153 / .2)
+rgb(52 211 153 / .5)
+#2c2f31
+#5e6266
+#30363c
+#eaeff2
+#d4dae0
+#f0f4f7
+#667481
+#d5dee2
+#e9eff4
+#dee4e9
+rgba(0,0,0,.65)
+#e4eaed
+#161a1c
+#ebf3f6
+#aebbc5
+#c2d0e0
+#98a7b6
+#242c31
+#353d43
+#222a30
+#525f6b
+#343e45
+#5f6b72
+#1e2428
+#232a2f
+#0c0e0f
+#060809
+#000002
+#182003
+#1a202c
+
