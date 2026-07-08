@@ -44,7 +44,7 @@ export const ServiceCard = () => (
 
 // Branded showcase card — the products page gradient composition.
 export const BrandedShowcase = () => (
-  <Card className="bg-gradient-to-br from-[#8b5cf6] to-[#7c3aed] text-white border-0 shadow-2xl" style={{ maxWidth: 380 }}>
+  <Card className="before:hidden bg-gradient-to-br from-[#8b5cf6] to-[#7c3aed] text-white border-0 shadow-2xl" style={{ maxWidth: 380 }}>
     <CardHeader>
       <CardTitle className="text-2xl text-white text-center">Stagently</CardTitle>
       <CardDescription className="text-white/80 text-center">

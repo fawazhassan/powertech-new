@@ -26,9 +26,19 @@ library build. The sync runs the package shape in explicit-entry mode.
 - **Fonts**: Inter via a Google Fonts `@import` in `.design-sync/tailwind.input.css`
   (`[FONT_REMOTE]`, expected). The site loads Inter via next/font; the input CSS mirrors it
   with a static body font-family rule.
-- **Theme quirk (intentional, site truth)**: `tailwind.config.ts` sets `secondary.DEFAULT`
-  to the same emerald as primary, so `Button variant="secondary"` looks like `default`. The
-  indigo accent is `--accent`/`bg-accent`. Conventions.md warns the design agent.
+- **Lumina Refined (2026-07-08)**: the site's style comes from
+  `templates/lumina-refined/LuminaRefined.dc.html` in the Claude Design project — deep
+  emerald #047857, indigo #4F46E5, canvas #F7FAF9, Instrument Serif italic accents,
+  IBM Plex Mono micro-labels, gradient hairlines, dot grids, offset-shadow buttons.
+  `bg-secondary` is now WHITE with ink foreground (the white ink-border button look) —
+  it is no longer an emerald twin of primary.
+- **Signature utilities** (`mono-label`, `serif-accent`, `text-gradient-brand`,
+  `hairline-gradient(-center)`, `dot-grid(-dark)`) live in `app/globals.css`
+  `@layer components` — they tree-shake like utilities, so the sync tailwind config
+  SAFELISTS them; keep that list in step with globals.css.
+- **Font vars**: `--font-serif-accent`/`--font-mono-label` come from next/font on the
+  site; `.design-sync/tailwind.input.css` defines them at `:root` (plus the 3-family
+  Google Fonts import) so the DS bundle is self-sufficient outside Next.
 - **Card viewports**: Header/Footer use `cardMode: column` with `viewport: 1280x…` — below
   1024px (Tailwind `lg`) Header renders its mobile hamburger state and the desktop nav
   disappears from the card.

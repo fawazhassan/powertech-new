@@ -25,6 +25,24 @@ const config = {
     "rounded-lg",
     "rounded-md",
     "rounded-sm",
+    "rounded-[11px]",
+    // Lumina signature layer — keep available for the design agent even when
+    // no site page or preview currently uses one of them.
+    "mono-label",
+    "serif-accent",
+    "text-gradient-brand",
+    "hairline-gradient",
+    "hairline-gradient-center",
+    "dot-grid",
+    "dot-grid-dark",
+    "font-serif-accent",
+    "font-mono-label",
+    "bg-ink",
+    "text-ink",
+    "border-ink",
+    "text-slate-300",
+    "text-slate-400",
+    "before:hidden",
   ],
 } satisfies Config
 

@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "../app/globals.css";
 
-/* The site applies Inter via next/font on <body>; mirror it statically here. */
+/* The site applies these via next/font on <body>; mirror them statically so
+   the design-system bundle is self-sufficient outside Next. */
+:root {
+  --font-serif-accent: "Instrument Serif";
+  --font-mono-label: "IBM Plex Mono";
+}
 body {
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
