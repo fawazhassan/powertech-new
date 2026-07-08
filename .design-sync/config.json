@@ -1,0 +1,27 @@
+{
+  "projectId": "a7f5274f-5256-44a3-bb89-ade13f2e06df",
+  "shape": "package",
+  "pkg": "powertech-digital",
+  "globalName": "PowerTechDigital",
+  "entry": ".design-sync/entry.ts",
+  "srcDir": "components",
+  "componentSrcMap": {
+    "Button": "components/ui/button.tsx",
+    "Card": "components/ui/card.tsx",
+    "CardHeader": "components/ui/card.tsx",
+    "CardFooter": "components/ui/card.tsx",
+    "CardTitle": "components/ui/card.tsx",
+    "CardDescription": "components/ui/card.tsx",
+    "CardContent": "components/ui/card.tsx",
+    "Header": "components/header.tsx",
+    "Footer": "components/footer.tsx"
+  },
+  "tsconfig": ".design-sync/tsconfig.sync.json",
+  "cssEntry": ".design-sync/generated/theme.css",
+  "overrides": {
+    "Header": { "cardMode": "column", "viewport": "1280x180" },
+    "Footer": { "cardMode": "column", "viewport": "1280x480" }
+  },
+  "readmeHeader": ".design-sync/conventions.md",
+  "buildCmd": "npx tailwindcss -c .design-sync/tailwind.sync.config.ts -i .design-sync/tailwind.input.css -o .design-sync/generated/theme.css"
+}
