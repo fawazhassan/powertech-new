@@ -220,7 +220,7 @@ export default function PowerPlatformSolutionsPage() {
               >
                 <Card className="h-full text-center">
                   <CardHeader>
-                    <div className="mx-auto mb-4 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
+                    <div className="mx-auto mb-4 w-12 h-12 rounded-[11px] bg-primary-50 flex items-center justify-center">
                       <benefit.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl">{benefit.title}</CardTitle>
@@ -275,17 +275,17 @@ export default function PowerPlatformSolutionsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="bg-gradient-to-br from-[#10b981] to-[#10b981] text-white border-0">
+              <Card className="before:hidden bg-ink dot-grid-dark text-white border-0">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">
                     Ready to Transform Your Business?
                   </CardTitle>
-                  <CardDescription className="text-blue-100">
+                  <CardDescription className="text-slate-400">
                     Let's discuss how Power Platform can solve your specific challenges
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-blue-50">
+                  <p className="text-slate-300">
                     Schedule a consultation with our Power Platform experts to explore how we can
                     help automate your workflows, build custom applications, and unlock insights
                     from your data.

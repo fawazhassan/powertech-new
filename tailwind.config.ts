@@ -23,8 +23,9 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ink: "#0F172A",
         primary: {
-          DEFAULT: "#10b981",
+          DEFAULT: "#047857",
           foreground: "#ffffff",
           50: "#ecfdf5",
           100: "#d1fae5",
@@ -38,18 +39,8 @@ const config = {
           900: "#064e3b",
         },
         secondary: {
-          DEFAULT: "#10b981",
-          foreground: "#ffffff",
-          50: "#ecfdf5",
-          100: "#d1fae5",
-          200: "#a7f3d0",
-          300: "#6ee7b7",
-          400: "#34D399",
-          500: "#10b981",
-          600: "#059669",
-          700: "#047857",
-          800: "#065f46",
-          900: "#064e3b",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -60,7 +51,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#6577F3",
+          DEFAULT: "#4F46E5",
           foreground: "#ffffff",
           purple: "#9333ea",
           cyan: "#0FADCF",
@@ -74,6 +65,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        "serif-accent": ["var(--font-serif-accent)", "Georgia", "serif"],
+        "mono-label": ["var(--font-mono-label)", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

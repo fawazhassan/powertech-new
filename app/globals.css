@@ -2,50 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Lumina — Refined: soft green-tinted canvas, ink foreground, deep emerald
+   primary, indigo accent. Signature layer utilities live in @layer components. */
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 160 23% 97%;
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
-    --primary: 160 84% 39%;
+    --primary: 163 94% 24%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 229 73% 56%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 222 47% 11%;
     --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 235 79% 69%;
+    --muted-foreground: 210 15% 42%;
+    --accent: 243 75% 59%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 229 73% 56%;
-    --radius: 0.5rem;
+    --border: 156 12% 92%;
+    --input: 156 12% 92%;
+    --ring: 163 94% 24%;
+    --radius: 0.875rem;
   }
 
   .dark {
-    --background: 217 33% 17%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
-    --card: 222 47% 11%;
+    --card: 217 33% 17%;
     --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
+    --popover: 217 33% 17%;
     --popover-foreground: 210 40% 98%;
     --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 229 73% 56%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
-    --accent: 235 79% 69%;
+    --accent: 243 75% 59%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 229 73% 56%;
+    --ring: 160 84% 39%;
   }
 }
 
@@ -55,5 +57,45 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Lumina signature layer */
+@layer components {
+  /* Monospace micro-label: `// section` kickers, indices, meta rows */
+  .mono-label {
+    font-family: var(--font-mono-label), ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  /* Serif italic accent — one word/phrase per headline, never more */
+  .serif-accent {
+    font-family: var(--font-serif-accent), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .text-gradient-brand {
+    background: linear-gradient(90deg, #047857, #4f46e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hairline-gradient {
+    height: 1px;
+    background: linear-gradient(90deg, #047857, #4f46e5, transparent);
+  }
+  .hairline-gradient-center {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #047857, #4f46e5, transparent);
+  }
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .dot-grid-dark {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
   }
 }

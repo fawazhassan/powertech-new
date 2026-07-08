@@ -11,23 +11,44 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-[#f5f7fd] py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative bg-background dot-grid py-20 lg:py-32">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 80% at 50% 0%, rgba(16,185,129,0.08), transparent)",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border-[1.5px] border-primary-800 bg-white px-3.5 py-1.5 shadow-[2px_2px_0_rgba(6,95,70,0.25)]"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
+              <span className="mono-label normal-case tracking-normal text-primary">
+                Microsoft Power Platform specialists
+              </span>
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+              className="text-4xl font-extrabold tracking-[-0.03em] text-gray-900 sm:text-6xl"
             >
               Transforming Ideas into{" "}
-              <span className="text-primary">Powerful Solutions</span>
+              <span className="serif-accent text-gradient-brand text-[1.12em] pr-1">
+                Powerful Solutions
+              </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-6 text-lg leading-8 text-gray-600"
+              className="mt-6 text-lg leading-8 text-muted-foreground"
             >
               We build cutting-edge custom software solutions and harness the power of
               Microsoft Power Platform to drive your business forward.
@@ -57,10 +78,11 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <p className="mono-label text-primary mb-4">{"// Services"}</p>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Services
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-muted-foreground">
               Comprehensive solutions tailored to your business needs
             </p>
           </div>
@@ -73,10 +95,13 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <Link href="/power-platform-solutions">
-                <Card className="h-full hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary">
+                <Card className="h-full cursor-pointer">
                   <CardHeader>
-                    <div className="mb-4 w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-                      <Zap className="h-6 w-6 text-primary" />
+                    <div className="mb-4 flex items-start justify-between">
+                      <div className="w-12 h-12 rounded-[11px] bg-primary-50 flex items-center justify-center">
+                        <Zap className="h-6 w-6 text-primary" />
+                      </div>
+                      <span className="font-mono-label text-xs text-[#C2CCD4]">01</span>
                     </div>
                     <CardTitle>Power Platform Solutions</CardTitle>
                     <CardDescription>
@@ -111,10 +136,13 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Link href="/custom-solutions">
-                <Card className="h-full hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary">
+                <Card className="h-full cursor-pointer">
                   <CardHeader>
-                    <div className="mb-4 w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-                      <Code className="h-6 w-6 text-purple-600" />
+                    <div className="mb-4 flex items-start justify-between">
+                      <div className="w-12 h-12 rounded-[11px] bg-indigo-50 flex items-center justify-center">
+                        <Code className="h-6 w-6 text-accent" />
+                      </div>
+                      <span className="font-mono-label text-xs text-[#C2CCD4]">02</span>
                     </div>
                     <CardTitle>Custom Solutions</CardTitle>
                     <CardDescription>
@@ -125,15 +153,15 @@ export default function Home() {
                   <CardContent>
                     <ul className="space-y-2 text-sm text-gray-600">
                       <li className="flex items-center gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-purple-600" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent" />
                         Custom Web & Mobile Apps
                       </li>
                       <li className="flex items-center gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-purple-600" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent" />
                         AI/ML Integration
                       </li>
                       <li className="flex items-center gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-purple-600" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent" />
                         Cloud Solutions
                       </li>
                     </ul>
@@ -149,10 +177,11 @@ export default function Home() {
       <section className="py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <p className="mono-label text-primary mb-4">{"// Products"}</p>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Products
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-muted-foreground">
               Innovative SaaS solutions built by our team
             </p>
           </div>
@@ -189,7 +218,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <a href={product.url} target="_blank" rel="noopener noreferrer">
-                  <Card className={`h-full hover:shadow-2xl transition-all cursor-pointer bg-gradient-to-br ${product.color} text-white border-0`}>
+                  <Card className={`h-full before:hidden hover:shadow-2xl cursor-pointer bg-gradient-to-br ${product.color} text-white border-0`}>
                     <CardHeader>
                       <div className="mb-4 w-20 h-20 mx-auto rounded-xl bg-white flex items-center justify-center p-3">
                         <div className="relative w-full h-full">
@@ -226,13 +255,16 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#10b981] to-[#10b981] py-16">
+      <section className="relative bg-ink dot-grid-dark py-16">
+        <div className="hairline-gradient-center absolute inset-x-0 top-0" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <p className="mono-label text-primary-400 mb-4">{"// Get started"}</p>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to start your project?
+              Ready to start your{" "}
+              <span className="serif-accent text-primary-400 text-[1.1em]">project?</span>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
               Let's discuss how we can help transform your business with innovative technology solutions.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

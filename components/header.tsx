@@ -18,7 +18,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white border-b sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-[#EEF2F0]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
@@ -29,7 +29,7 @@ export function Header() {
               height={40}
               className="h-10 w-10"
             />
-            <span className="text-xl font-bold text-primary">PowerTech Digital</span>
+            <span className="text-xl font-extrabold tracking-tight text-foreground">PowerTech Digital</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -47,7 +47,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
+              className="text-sm font-medium leading-6 text-muted-foreground hover:text-primary transition-colors"
             >
               {item.name}
             </Link>

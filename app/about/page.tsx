@@ -82,7 +82,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full border-2 hover:border-primary transition-colors">
+                <Card className="h-full">
                   <CardHeader>
                     <div className="mb-4 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <value.icon className="h-6 w-6 text-primary" />

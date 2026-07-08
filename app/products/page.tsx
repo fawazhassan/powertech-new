@@ -134,7 +134,7 @@ export default function ProductsPage() {
                   {/* Product Showcase Card */}
                   <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
                     <Card
-                      className={`bg-gradient-to-br ${product.color} text-white border-0 shadow-2xl`}
+                      className={`before:hidden bg-gradient-to-br ${product.color} text-white border-0 shadow-2xl`}
                     >
                       <CardHeader>
                         <div className="w-32 h-32 mx-auto rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center mb-4 p-4">
@@ -225,7 +225,7 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#10b981] to-[#10b981] py-16">
+      <section className="relative bg-ink dot-grid-dark py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,7 +237,7 @@ export default function ProductsPage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Want to Build Your Own Product?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
               We can help you create innovative SaaS solutions just like these. Let's discuss
               your product idea and turn it into reality.
             </p>

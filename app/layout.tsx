@@ -1,11 +1,22 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Instrument_Serif, IBM_Plex_Mono } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  variable: "--font-serif-accent",
+})
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono-label",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://powertech.digital'),
@@ -93,7 +104,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${instrumentSerif.variable} ${plexMono.variable}`}>
         <Script
           id="organization-schema"
           type="application/ld+json"
