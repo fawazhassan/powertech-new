@@ -18,6 +18,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
+    <>
     <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-[#EEF2F0]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
@@ -59,9 +60,12 @@ export function Header() {
           </Link>
         </div>
       </nav>
+    </header>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
+    {/* Mobile menu — rendered OUTSIDE <header>: its backdrop-filter makes it
+        the containing block for fixed descendants, which would trap this
+        full-screen overlay inside the header bar. */}
+    {mobileMenuOpen && (
         <div className="lg:hidden" role="dialog" aria-modal="true">
           <div className="fixed inset-0 z-50"></div>
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -108,7 +112,7 @@ export function Header() {
             </div>
           </div>
         </div>
-      )}
-    </header>
+    )}
+    </>
   )
 }
