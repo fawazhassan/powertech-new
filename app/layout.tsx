@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Instrument_Serif, IBM_Plex_Mono } from "next/font/google"
+import { Inter, Instrument_Serif, IBM_Plex_Mono, Manrope } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -17,15 +17,21 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
   variable: "--font-mono-label",
 })
+// Chironis wordmark face
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: "600",
+  variable: "--font-logo",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://powertech.digital'),
   title: {
-    default: "PowerTech Digital - Custom Software Solutions & Power Platform Experts",
+    default: "PowerTech Digital - Chironis AI & Automation Platform and Custom Software",
     template: "%s | PowerTech Digital"
   },
-  description: "UK-based software consultancy specializing in AI-driven custom development, Microsoft Power Platform solutions, and innovative SaaS products. Transform your business with PowerTech Digital.",
-  keywords: ["Power Platform", "Custom Software Development", "AI Solutions", "Microsoft Power Apps", "Power Automate", "Power BI", "Low-code Development", "SaaS Products", "UK Software Consultancy", "Digital Transformation"],
+  description: "UK-based software consultancy and maker of Chironis, the platform behind our AI & Automation Roadmap Assessment. We find where AI pays, build it with earned autonomy and prove what it gave back.",
+  keywords: ["AI Automation Assessment", "AI Roadmap", "Chironis", "Process Mapping", "AI Agents", "Benefit Tracking", "Custom Software Development", "AI Solutions", "SaaS Products", "UK Software Consultancy"],
   authors: [{ name: "PowerTech Digital" }],
   creator: "PowerTech Digital",
   publisher: "PowerTech Digital",
@@ -38,8 +44,8 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://powertech.digital',
     siteName: 'PowerTech Digital',
-    title: 'PowerTech Digital - Custom Software Solutions & Power Platform Experts',
-    description: 'Empowering businesses through innovative software solutions, AI-driven technologies, and Microsoft Power Platform expertise.',
+    title: 'PowerTech Digital - Chironis AI & Automation Platform and Custom Software',
+    description: 'AI automation analysts at scale. PowerTech Digital builds Chironis, the platform for finding where AI pays and proving what it gave back.',
     images: [{
       url: '/logo.png',
       width: 1024,
@@ -50,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'PowerTech Digital - Custom Software Solutions',
-    description: 'Empowering businesses through innovative software solutions and Power Platform expertise.',
+    description: 'AI automation analysts at scale. AI & automation assessments run on Chironis.',
     images: ['/logo.png'],
   },
   robots: {
@@ -86,7 +92,7 @@ export default function RootLayout({
     "name": "PowerTech Digital",
     "url": "https://powertech.digital",
     "logo": "https://powertech.digital/logo.png",
-    "description": "UK-based software consultancy specializing in AI-driven custom development, Microsoft Power Platform solutions, and innovative SaaS products.",
+    "description": "UK-based software consultancy and maker of Chironis, the platform behind our AI & Automation Roadmap Assessment.",
     "sameAs": [
       "https://www.linkedin.com/company/powertech-digital"
     ],
@@ -104,7 +110,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} ${instrumentSerif.variable} ${plexMono.variable}`}>
+      <body className={`${inter.className} ${instrumentSerif.variable} ${plexMono.variable} ${manrope.variable}`}>
         <Script
           id="organization-schema"
           type="application/ld+json"

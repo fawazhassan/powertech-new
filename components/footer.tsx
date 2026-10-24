@@ -12,7 +12,7 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">PowerTech Digital</h3>
             <p className="text-gray-400 mb-4">
               Empowering businesses through innovative software solutions, AI-driven technologies,
-              and Microsoft Power Platform expertise.
+              and Chironis, our platform for AI and automation.
             </p>
             <div className="flex space-x-4">
               <a href="mailto:fawaz@powertech.digital" className="text-gray-400 hover:text-white transition-colors">
@@ -29,8 +29,8 @@ export function Footer() {
             <h4 className="mono-label text-slate-400 mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/power-platform-solutions" className="text-gray-400 hover:text-white transition-colors">
-                  Power Platform Solutions
+                <Link href="/chironis" className="text-gray-400 hover:text-white transition-colors">
+                  Chironis
                 </Link>
               </li>
               <li>

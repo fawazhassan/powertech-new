@@ -9,7 +9,7 @@ import { Button } from "./ui/button"
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Power Platform Solutions", href: "/power-platform-solutions" },
+  { name: "Chironis", href: "/chironis" },
   { name: "Custom Solutions", href: "/custom-solutions" },
   { name: "Our Products", href: "/products" },
 ]

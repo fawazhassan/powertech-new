@@ -2,9 +2,10 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Code, Zap, Brain, Users } from "lucide-react"
+import { ArrowRight, Code, Brain, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChironisMark } from "@/components/chironis-logo"
 import { motion } from "framer-motion"
 
 export default function Home() {
@@ -26,12 +27,18 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border-[1.5px] border-primary-800 bg-white px-3.5 py-1.5 shadow-[2px_2px_0_rgba(6,95,70,0.25)]"
+              className="mb-6 inline-flex"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
-              <span className="mono-label normal-case tracking-normal text-primary">
-                Microsoft Power Platform specialists
-              </span>
+              <Link
+                href="/chironis"
+                className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-primary-800 bg-white px-3.5 py-1.5 shadow-[2px_2px_0_rgba(6,95,70,0.25)] transition-transform hover:translate-x-[1px] hover:translate-y-[1px]"
+              >
+                <ChironisMark size={16} className="text-ink" />
+                <span className="mono-label normal-case tracking-normal text-primary">
+                  Introducing Chironis, our AI &amp; automation platform
+                </span>
+                <ArrowRight className="h-3.5 w-3.5 text-primary" />
+              </Link>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -50,8 +57,8 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 text-lg leading-8 text-muted-foreground"
             >
-              We build cutting-edge custom software solutions and harness the power of
-              Microsoft Power Platform to drive your business forward.
+              We build cutting-edge custom software, and with Chironis, our own platform, we find
+              where AI and automation pay off and prove what they give back.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -94,34 +101,34 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Link href="/power-platform-solutions">
+              <Link href="/chironis">
                 <Card className="h-full cursor-pointer">
                   <CardHeader>
                     <div className="mb-4 flex items-start justify-between">
                       <div className="w-12 h-12 rounded-[11px] bg-primary-50 flex items-center justify-center">
-                        <Zap className="h-6 w-6 text-primary" />
+                        <ChironisMark size={28} className="text-ink" />
                       </div>
                       <span className="font-mono-label text-xs text-[#C2CCD4]">01</span>
                     </div>
-                    <CardTitle>Power Platform Solutions</CardTitle>
+                    <CardTitle>Chironis</CardTitle>
                     <CardDescription>
-                      Leverage Microsoft Power Platform to automate workflows, build custom apps,
-                      and visualize data
+                      AI automation analysts at scale: find, size and prove where AI pays,
+                      starting with a four-week roadmap assessment
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-sm text-gray-600">
                       <li className="flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        Power Apps Development
+                        Process analysis across every team at once
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        Power Automate Flows
+                        A graded, sized automation roadmap
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        Power BI Analytics
+                        Benefit counted case by case
                       </li>
                     </ul>
                   </CardContent>

@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/power-platform-solutions',
+        destination: '/chironis',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

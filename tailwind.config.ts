@@ -69,6 +69,7 @@ const config = {
       fontFamily: {
         "serif-accent": ["var(--font-serif-accent)", "Georgia", "serif"],
         "mono-label": ["var(--font-mono-label)", "ui-monospace", "monospace"],
+        logo: ["var(--font-logo)", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

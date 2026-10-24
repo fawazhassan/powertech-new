@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/power-platform-solutions`,
+      url: `${baseUrl}/chironis`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,

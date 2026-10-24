@@ -10,6 +10,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export default function ProductsPage() {
   const products = [
     {
+      name: "Chironis",
+      url: "/chironis",
+      tagline: "AI & Automation Platform",
+      description:
+        "AI automation analysts at scale. Chironis does the heavy lifting of process analysis across a whole organisation: it runs AI interviews and reads workshop recordings, drafts every process map, sizes where AI pays with graded evidence, and counts every case each automation handles. It is the platform behind our AI & Automation Roadmap Assessment.",
+      logo: "/assets/images/chironis-logo.svg",
+      color: "from-[#0F172A] to-[#064E3B]",
+      features: [
+        "Process analysis across every team at once, by AI interview",
+        "Process maps (BPMN 2.0) drafted from what people said",
+        "Every figure graded, from observed to asserted",
+        "Error-risk bands and earned autonomy for every agent",
+        "Benefit counted case by case, with quarterly statements",
+      ],
+    },
+    {
       name: "talent.voxle.ai",
       url: "https://talent.voxle.ai?utm_source=ptd",
       tagline: "AI-Powered Recruitment Platform",
@@ -123,12 +139,21 @@ export default function ProductsPage() {
                     </div>
 
                     {/* CTA */}
-                    <Link href={product.url} target="_blank" rel="noopener noreferrer">
-                      <Button size="lg" className="gap-2">
-                        Visit {product.name}
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </Link>
+                    {product.url.startsWith("/") ? (
+                      <Link href={product.url}>
+                        <Button size="lg" className="gap-2">
+                          Explore {product.name}
+                          <ArrowRight className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Link href={product.url} target="_blank" rel="noopener noreferrer">
+                        <Button size="lg" className="gap-2">
+                          Visit {product.name}
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
 
                   {/* Product Showcase Card */}
@@ -155,12 +180,21 @@ export default function ProductsPage() {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <Link href={product.url} target="_blank" rel="noopener noreferrer">
-                          <Button size="lg" variant="secondary" className="w-full gap-2">
-                            Visit Website
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </Link>
+                        {product.url.startsWith("/") ? (
+                          <Link href={product.url}>
+                            <Button size="lg" variant="secondary" className="w-full gap-2">
+                              How it works
+                              <ArrowRight className="h-4 w-4" />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Link href={product.url} target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" variant="secondary" className="w-full gap-2">
+                              Visit Website
+                              <ExternalLink className="h-4 w-4" />
+                            </Button>
+                          </Link>
+                        )}
                       </CardContent>
                     </Card>
                   </div>

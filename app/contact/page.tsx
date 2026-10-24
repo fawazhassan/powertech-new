@@ -40,7 +40,7 @@ export default function ContactPage() {
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <p className="text-gray-600 mb-8">
-                Whether you need Power Platform solutions, custom software development, or want to
+                Whether you want to explore Chironis, custom software development, or want to
                 discuss your product idea, we're here to help.
               </p>
 
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle>New Project Inquiry</CardTitle>
                   <CardDescription>
-                    Interested in Power Platform or custom development services
+                    Interested in Chironis or custom development
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
