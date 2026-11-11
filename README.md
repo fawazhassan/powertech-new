@@ -16,7 +16,7 @@ A modern, responsive website built with Next.js 14, TypeScript, Tailwind CSS, an
 - **About Us** (`/about`) - Company mission, vision, values, and leadership
 - **Power Platform Solutions** (`/power-platform-solutions`) - Microsoft Power Platform services
 - **Custom Solutions** (`/custom-solutions`) - AI/ML and custom development services
-- **Our Products** (`/products`) - talent.voxle, furnishly.app, stagently.com
+- **Our Products** (`/products`) - Chironis, talent.voxle, stagently.com
 - **Contact** (`/contact`) - Contact information and inquiry forms
 
 ## Getting Started

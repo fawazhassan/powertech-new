@@ -42,22 +42,6 @@ export default function ProductsPage() {
       ],
     },
     {
-      name: "furnishly.app",
-      url: "https://furnishly.app?utm_source=ptd",
-      tagline: "AI Product Photography",
-      description:
-        "Transform simple product shots into stunning lifestyle images that boost sales and conversions. Generate professional homeware photography in under 60 seconds.",
-      logo: "/assets/images/furnishly-logo.png",
-      color: "from-[#6b7280] to-[#4b5563]",
-      features: [
-        "AI-powered product photography in seconds",
-        "10+ homeware categories supported",
-        "Preset, seasonal, and custom styles",
-        "E-commerce and social media ready",
-        "Starting at $0.29 per image",
-      ],
-    },
-    {
       name: "stagently.com",
       url: "https://stagently.com?utm_source=ptd",
       tagline: "AI Virtual Staging",

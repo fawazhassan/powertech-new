@@ -131,7 +131,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    Schedule a demo of talent.voxle.ai, furnishly.app, or stagently.com.
+                    Schedule a demo of Chironis, talent.voxle.ai, or stagently.com.
                   </p>
                   <Button asChild variant="outline" className="w-full">
                     <a href="https://calendly.com/fawaz-powertech/30min" target="_blank" rel="noopener noreferrer">

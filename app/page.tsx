@@ -193,7 +193,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
             {[
               {
                 name: "talent.voxle.ai",
@@ -201,13 +201,6 @@ export default function Home() {
                 description: "AI-Powered Recruitment Platform",
                 logo: "/assets/images/voxle-logo.png",
                 color: "from-[#8b5cf6] to-[#7c3aed]",
-              },
-              {
-                name: "furnishly.app",
-                url: "https://furnishly.app?utm_source=ptd",
-                description: "AI Product Photography",
-                logo: "/assets/images/furnishly-logo.png",
-                color: "from-[#6b7280] to-[#4b5563]",
               },
               {
                 name: "stagently.com",
