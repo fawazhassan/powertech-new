@@ -6,7 +6,6 @@ import { ArrowRight, Code, Brain, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChironisMark } from "@/components/chironis-logo"
-import { Screenshot } from "@/components/screenshot"
 
 export default function Home() {
   return (
@@ -14,8 +13,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-background dot-grid py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
-            <div>
+          <div className="max-w-4xl">
               <Link
                 href="/chironis"
                 className="mb-7 inline-flex items-center gap-2 rounded-full border-[1.5px] border-primary-800 bg-white px-3.5 py-1.5 shadow-[2px_2px_0_rgba(6,95,70,0.25)] transition-transform hover:translate-x-[1px] hover:translate-y-[1px]"
@@ -26,7 +24,7 @@ export default function Home() {
                 </span>
                 <ArrowRight className="h-3.5 w-3.5 text-primary" />
               </Link>
-              <h1 className="text-5xl font-extrabold leading-[1.02] tracking-[-0.035em] text-gray-900 sm:text-6xl">
+              <h1 className="text-5xl font-extrabold leading-[1.02] tracking-[-0.035em] text-gray-900 sm:text-6xl lg:text-7xl">
                 Transforming Ideas into <span className="text-primary">Powerful Solutions</span>
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground">
@@ -45,12 +43,6 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-            </div>
-            <Screenshot
-              src="/assets/images/chironis/dashboard.webp"
-              alt="Chironis client dashboard showing engagement stage, candidates assessed, capacity and benefit tracked"
-              priority
-            />
           </div>
         </div>
       </section>
