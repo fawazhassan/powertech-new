@@ -161,7 +161,7 @@ export default function AboutPage() {
                   </div>
 
                   <Link
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/fawaz-hassan-6a5a7bb7/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
