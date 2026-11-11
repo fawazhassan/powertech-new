@@ -108,26 +108,30 @@ export default function CustomSolutionsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-[#f5f7fd] py-20">
+      <section className="relative bg-primary-900 dot-grid-dark py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className="mx-auto max-w-3xl text-center"
+            className="max-w-3xl"
           >
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl">
               Custom Software Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-primary-100">
               From AI-powered applications to full-stack web and mobile solutions, we build
               bespoke software tailored to your unique business requirements.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link href="/contact">
-                <Button size="lg" className="gap-2">
+                <Button size="lg" variant="secondary" className="gap-2">
                   Start Your Project <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/products">
-                <Button variant="outline" size="lg">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white/70 bg-transparent text-white shadow-none hover:bg-white/10"
+                >
                   View Our Products
                 </Button>
               </Link>
@@ -181,7 +185,7 @@ export default function CustomSolutionsPage() {
       </section>
 
       {/* Technologies */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             className="mx-auto max-w-2xl text-center mb-16"
@@ -242,7 +246,7 @@ export default function CustomSolutionsPage() {
       </section>
 
       {/* Security & Quality */}
-      <section className="py-20 bg-[#f5f7fd]">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

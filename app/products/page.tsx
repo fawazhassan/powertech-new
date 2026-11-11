@@ -58,15 +58,15 @@ export default function ProductsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-[#f5f7fd] py-20">
+      <section className="relative bg-primary-900 dot-grid-dark py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className="mx-auto max-w-3xl text-center"
+            className="max-w-3xl"
           >
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl">
               Our Products
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-primary-100">
               Innovative SaaS solutions built by PowerTech Digital to solve real-world business
               challenges. Each product showcases our commitment to excellence in software
               development and user experience.
@@ -173,7 +173,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Technology Section */}
-      <section className="py-20 bg-[#f9fafb]">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             className="mx-auto max-w-2xl text-center mb-12"
@@ -218,7 +218,7 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-ink dot-grid-dark py-16">
+      <section className="relative bg-primary-900 dot-grid-dark py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             className="mx-auto max-w-2xl text-center"
@@ -226,7 +226,7 @@ export default function ProductsPage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Want to Build Your Own Product?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-100">
               We can help you create innovative SaaS solutions just like these. Let's discuss
               your product idea and turn it into reality.
             </p>

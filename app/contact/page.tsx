@@ -8,15 +8,15 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-[#f5f7fd] py-20">
+      <section className="relative bg-primary-900 dot-grid-dark py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className="mx-auto max-w-3xl text-center"
+            className="max-w-3xl"
           >
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl">
               Get in Touch
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-primary-100">
               Ready to start your project? Have questions about our services? We'd love to hear
               from you.
             </p>

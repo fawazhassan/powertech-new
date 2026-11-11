@@ -50,15 +50,15 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-[#f5f7fd] py-20">
+      <section className="relative bg-primary-900 dot-grid-dark py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className="mx-auto max-w-3xl text-center"
+            className="max-w-3xl"
           >
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-white sm:text-6xl">
               About PowerTech Digital
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-primary-100">
               UK-based innovators re-defining what good digital transformation should look like in
               the golden age of AI.
             </p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#f9fafb]">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             className="mx-auto max-w-3xl text-center mb-12"
@@ -173,7 +173,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-8 bg-gray-50 border-t">
+              <div className="p-8 bg-background border-t">
                 <div className="mx-auto max-w-[34rem] text-gray-600 leading-7 space-y-4">
                   <p>
                     Fawaz Hassan is a versatile technology leader and CEO of PowerTech Digital, with

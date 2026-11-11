@@ -1,11 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChironisMark, ChironisWordmark } from "@/components/chironis-logo"
+import { Screenshot } from "@/components/screenshot"
 
 const gaps = [
   {
@@ -173,24 +173,6 @@ const phases = [
   },
 ]
 
-function Screenshot({ src, alt, priority }: { src: string; alt: string; priority?: boolean }) {
-  return (
-    <figure>
-      <div className="overflow-hidden rounded-lg border bg-white shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
-        <div className="flex items-center gap-1.5 border-b bg-[#F8FAF9] px-4 py-2.5" aria-hidden="true">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#E2E8F0]" />
-        </div>
-        <Image src={src} alt={alt} width={1280} height={800} priority={priority} className="h-auto w-full" />
-      </div>
-      <figcaption className="micro-label mt-3 text-[11px] text-muted-foreground">
-        Chironis demo workspace · illustrative data
-      </figcaption>
-    </figure>
-  )
-}
-
 function Heading({
   stage,
   title,
@@ -292,7 +274,7 @@ export default function ChironisPage() {
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="scroll-mt-24 py-20 bg-[#f9fafb]">
+      <section id="how-it-works" className="scroll-mt-24 py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <Heading title="One loop, five stages" />
@@ -380,11 +362,11 @@ export default function ChironisPage() {
               ))}
             </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="rounded-lg border bg-[#f9fafb] p-5">
+              <div className="rounded-lg border bg-background p-5">
                 <p className="font-semibold text-gray-900">Open standards</p>
                 <p className="mt-1 text-gray-600">Maps export as BPMN 2.0 and open in Camunda or Signavio.</p>
               </div>
-              <div className="rounded-lg border bg-[#f9fafb] p-5">
+              <div className="rounded-lg border bg-background p-5">
                 <p className="font-semibold text-gray-900">Duplication found</p>
                 <p className="mt-1 text-gray-600">Five detectors flag the same work being done twice across teams.</p>
               </div>
@@ -394,7 +376,7 @@ export default function ChironisPage() {
       </section>
 
       {/* 02 Size */}
-      <section className="py-20 bg-[#f9fafb]">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Heading stage="Size" title="Every number shows its working" />
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
@@ -580,7 +562,7 @@ export default function ChironisPage() {
       </section>
 
       {/* Trust */}
-      <section className="py-20 bg-[#f9fafb]">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Heading title="Built to be trusted with how you work" />
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -647,7 +629,7 @@ export default function ChironisPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative bg-ink dot-grid-dark py-20">
+      <section className="relative bg-primary-900 dot-grid-dark py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex justify-center">
@@ -656,7 +638,7 @@ export default function ChironisPage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
               Start with four weeks. Then decide what to build.
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-100">
               A fixed-fee roadmap assessment, run on Chironis by one forward-deployed engineer. You keep the
               evidence, the sized roadmap and a costed plan, whatever you decide next.
             </p>
