@@ -265,7 +265,7 @@ export default function CustomSolutionsPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="relative">
-                  <div className="font-mono-label text-6xl font-medium text-[#C2CCD4] mb-4">{item.step}</div>
+                  <div className="font-mono-label text-6xl font-medium text-slate-500 mb-4">{item.step}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>

@@ -73,6 +73,9 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Our Values
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -112,7 +115,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
               Why Choose PowerTech Digital?
             </h2>
-            <p className="text-lg text-gray-600 text-left">
+            <p className="mx-auto max-w-[65ch] text-lg leading-8 text-gray-600 text-left">
               At PowerTech Digital, we're innovators at the forefront of AI and Low-Code technology.
               We bring extensive experience in building Power Platform solutions for both FTSE 100
               companies and medium sized business. Our expertise in governance, delivery, and design
@@ -143,7 +146,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto max-w-5xl"
+            className="mx-auto max-w-4xl"
           >
             <Card className="overflow-hidden border-2">
               <div className="md:flex">
@@ -191,7 +194,7 @@ export default function AboutPage() {
               </div>
 
               <div className="p-8 bg-gray-50 border-t">
-                <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
+                <div className="mx-auto max-w-[70ch] text-gray-600 leading-7 space-y-4">
                   <p>
                     Fawaz Hassan is a versatile technology leader and CEO of PowerTech Digital, with
                     a career spanning the full spectrum of digital transformation and software

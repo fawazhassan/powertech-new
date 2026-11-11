@@ -577,11 +577,11 @@ export default function ChironisPage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-slate-300">
+          <p className="mt-6 max-w-[70ch] text-slate-300">
             Up a rung only on clean live cases and your approval. Down automatically when errors rise, or
             when the model, prompt or tools change.
           </p>
-          <p className="mt-4 text-slate-400">
+          <p className="mt-4 max-w-[70ch] text-slate-400">
             Agents can be built anywhere (Claude Agent SDK, OpenAI Agents SDK, Google ADK, Power Automate,
             n8n) and report every case to Chironis.
           </p>
@@ -681,11 +681,11 @@ export default function ChironisPage() {
                     </CardHeader>
                     <CardContent className={`space-y-4 border-t pt-5 ${dark ? "border-white/10" : ""}`}>
                       <div>
-                        <p className={`mono-label text-[11px] ${dark ? "text-slate-500" : "text-muted-foreground"}`}>You get</p>
+                        <p className={`mono-label text-[11px] ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You get</p>
                         <p className={`mt-1 ${dark ? "text-white" : "text-gray-900"}`}>{phase.get}</p>
                       </div>
                       <div>
-                        <p className={`mono-label text-[11px] ${dark ? "text-slate-500" : "text-muted-foreground"}`}>You decide</p>
+                        <p className={`mono-label text-[11px] ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You decide</p>
                         <p className={`mt-1 ${dark ? "text-white" : "text-gray-900"}`}>{phase.decide}</p>
                       </div>
                     </CardContent>

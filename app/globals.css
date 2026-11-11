@@ -58,6 +58,20 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+  p,
+  li {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: #a7f3d0;
+    color: #0f172a;
+  }
 }
 
 /* Lumina signature layer */

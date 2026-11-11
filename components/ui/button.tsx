@@ -10,7 +10,7 @@ const buttonVariants = cva(
         // Lumina primary: machined gradient, inner highlight, chunky offset
         // shadow that presses in on hover.
         default:
-          "bg-gradient-to-b from-[#059669] to-[#047857] text-white border-[1.5px] border-[#064E3B] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),2px_2px_0_#064E3B] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),1px_1px_0_#064E3B]",
+          "bg-gradient-to-b from-[#047857] to-[#065F46] text-white border-[1.5px] border-[#064E3B] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),2px_2px_0_#064E3B] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),1px_1px_0_#064E3B]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:

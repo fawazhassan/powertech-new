@@ -32,7 +32,7 @@ export default function ProductsPage() {
       description:
         "Stop losing top talent to lengthy hiring processes and inconsistent candidate evaluations. Our intelligent platform combines data-driven CV screening, AI-powered interviews, and talent validation to help you build exceptional teams faster and more confidently.",
       logo: "/assets/images/voxle-logo.png",
-      color: "from-[#8b5cf6] to-[#7c3aed]",
+      color: "from-[#7c3aed] to-[#6d28d9]",
       features: [
         "Intelligent CV Analysis with line-by-line scoring",
         "AI Content Detection (95% accuracy)",
@@ -159,7 +159,7 @@ export default function ProductsPage() {
                         <CardTitle className="text-2xl text-white text-center">
                           {product.name}
                         </CardTitle>
-                        <CardDescription className="text-white/80 text-center">
+                        <CardDescription className="text-white text-center">
                           {product.tagline}
                         </CardDescription>
                       </CardHeader>

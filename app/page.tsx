@@ -108,7 +108,7 @@ export default function Home() {
                       <div className="w-12 h-12 rounded-[11px] bg-primary-50 flex items-center justify-center">
                         <ChironisMark size={28} className="text-ink" />
                       </div>
-                      <span className="font-mono-label text-xs text-[#C2CCD4]">01</span>
+                      <span className="font-mono-label text-xs text-muted-foreground">01</span>
                     </div>
                     <CardTitle>Chironis</CardTitle>
                     <CardDescription>
@@ -149,7 +149,7 @@ export default function Home() {
                       <div className="w-12 h-12 rounded-[11px] bg-indigo-50 flex items-center justify-center">
                         <Code className="h-6 w-6 text-accent" />
                       </div>
-                      <span className="font-mono-label text-xs text-[#C2CCD4]">02</span>
+                      <span className="font-mono-label text-xs text-muted-foreground">02</span>
                     </div>
                     <CardTitle>Custom Solutions</CardTitle>
                     <CardDescription>
@@ -200,7 +200,7 @@ export default function Home() {
                 url: "https://talent.voxle.ai?utm_source=ptd",
                 description: "AI-Powered Recruitment Platform",
                 logo: "/assets/images/voxle-logo.png",
-                color: "from-[#8b5cf6] to-[#7c3aed]",
+                color: "from-[#7c3aed] to-[#6d28d9]",
               },
               {
                 name: "stagently.com",
@@ -231,7 +231,7 @@ export default function Home() {
                         </div>
                       </div>
                       <CardTitle className="text-white text-center">{product.name}</CardTitle>
-                      <CardDescription className="text-white/90 text-center">{product.description}</CardDescription>
+                      <CardDescription className="text-white text-center">{product.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="flex items-center justify-center text-sm text-white font-medium">
