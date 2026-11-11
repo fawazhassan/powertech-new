@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
+import { PowerTechWordmark } from "./powertech-logo"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,14 +23,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <Image
-              src="/assets/images/logo.png"
-              alt="PowerTech Digital"
-              width={40}
-              height={40}
-              className="h-10 w-10"
-            />
-            <span className="text-xl font-extrabold tracking-tight text-foreground">PowerTech Digital</span>
+            <PowerTechWordmark markSize={36} />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -71,14 +64,7 @@ export function Header() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-                <Image
-                  src="/assets/images/logo.png"
-                  alt="PowerTech Digital"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8"
-                />
-                <span className="text-lg font-bold text-primary">PowerTech Digital</span>
+                <PowerTechWordmark markSize={30} className="text-lg" />
               </Link>
               <button
                 type="button"
