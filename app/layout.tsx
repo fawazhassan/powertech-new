@@ -30,11 +30,8 @@ export const metadata: Metadata = {
   creator: "PowerTech Digital",
   publisher: "PowerTech Digital",
   icons: {
-    icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon.ico',
+    apple: '/logo.png',
   },
   openGraph: {
     type: 'website',

@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Mail, Linkedin } from "lucide-react"
-import { PowerTechWordmark } from "./powertech-logo"
 
 export function Footer() {
   return (
@@ -9,9 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-4">
-              <PowerTechWordmark markSize={30} className="text-lg text-white" hookClassName="text-primary-400" />
-            </div>
+            <h3 className="text-lg font-bold mb-4">PowerTech Digital</h3>
             <p className="text-gray-400 mb-4">
               Empowering businesses through innovative software solutions, AI-driven technologies,
               and Chironis, our platform for AI and automation.
