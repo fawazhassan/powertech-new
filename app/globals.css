@@ -76,33 +76,11 @@
 
 /* Lumina signature layer */
 @layer components {
-  /* Monospace micro-label: `// section` kickers, indices, meta rows */
-  .mono-label {
-    font-family: var(--font-mono-label), ui-monospace, monospace;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  /* Serif italic accent — one word/phrase per headline, never more */
-  .serif-accent {
-    font-family: var(--font-serif-accent), Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-  }
-  .text-gradient-brand {
-    background: linear-gradient(90deg, #047857, #4f46e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .hairline-gradient {
-    height: 1px;
-    background: linear-gradient(90deg, #047857, #4f46e5, transparent);
-  }
-  .hairline-gradient-center {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #047857, #4f46e5, transparent);
+  /* Small label: card meta rows, figure captions, footer column titles */
+  .micro-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
   .dot-grid {
     background-image: radial-gradient(circle, rgba(15, 23, 42, 0.05) 1px, transparent 1px);

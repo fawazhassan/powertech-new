@@ -2,18 +2,10 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChironisMark, ChironisWordmark } from "@/components/chironis-logo"
-
-const reveal = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 },
-}
 
 const gaps = [
   {
@@ -192,7 +184,7 @@ function Screenshot({ src, alt, priority }: { src: string; alt: string; priority
         </div>
         <Image src={src} alt={alt} width={1280} height={800} priority={priority} className="h-auto w-full" />
       </div>
-      <figcaption className="mono-label mt-3 text-[11px] text-muted-foreground">
+      <figcaption className="micro-label mt-3 text-[11px] text-muted-foreground">
         Chironis demo workspace · illustrative data
       </figcaption>
     </figure>
@@ -200,35 +192,23 @@ function Screenshot({ src, alt, priority }: { src: string; alt: string; priority
 }
 
 function Heading({
-  kicker,
+  stage,
   title,
-  accent,
   dark,
   className,
 }: {
-  kicker: string
+  stage?: string
   title: string
-  accent?: string
   dark?: boolean
   className?: string
 }) {
   return (
-    <div className={className}>
-      <p className={`mono-label mb-4 ${dark ? "text-primary-400" : "text-primary"}`}>{`// ${kicker}`}</p>
-      <h2
-        className={`text-3xl font-bold tracking-tight sm:text-4xl ${dark ? "text-white" : "text-gray-900"}`}
-      >
-        {title}
-        {accent && (
-          <>
-            {" "}
-            <span className={`serif-accent text-[1.1em] ${dark ? "text-primary-400" : "text-primary"}`}>
-              {accent}
-            </span>
-          </>
-        )}
-      </h2>
-    </div>
+    <h2
+      className={`text-3xl font-bold tracking-tight sm:text-4xl ${dark ? "text-white" : "text-gray-900"} ${className ?? ""}`}
+    >
+      {stage && <span className={dark ? "text-primary-400" : "text-primary"}>{stage}. </span>}
+      {title}
+    </h2>
   )
 }
 
@@ -237,28 +217,12 @@ export default function ChironisPage() {
     <div className="flex flex-col">
       {/* Hero */}
       <section className="relative bg-background dot-grid py-20 lg:py-28">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 80% at 30% 0%, rgba(16,185,129,0.08), transparent)",
-          }}
-        />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div>
               <ChironisWordmark markSize={34} className="text-[24px]" />
-              <p className="mono-label mt-8 mb-4 text-primary">
-                {"// For AI & automation programmes"}
-              </p>
-              <h1 className="text-4xl font-extrabold tracking-[-0.03em] text-gray-900 sm:text-6xl">
-                AI automation analysts,{" "}
-                <span className="serif-accent text-primary text-[1.08em] pr-1">at scale.</span>
+              <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.03em] text-gray-900 sm:text-6xl">
+                AI automation analysts, at scale.
               </h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 Chironis does the heavy lifting of process analysis across your whole organisation: it
@@ -286,19 +250,15 @@ export default function ChironisPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div>
               <Screenshot
                 src="/assets/images/chironis/dashboard.webp"
                 alt="Chironis client dashboard showing engagement stage, candidates assessed, capacity and benefit tracked"
                 priority
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -307,24 +267,21 @@ export default function ChironisPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Heading
-            kicker="The situation"
-            title="AI programmes stall"
-            accent="for want of context"
+            title="AI programmes stall for want of context"
             className="mx-auto max-w-2xl text-center"
           />
           <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
             {gaps.map((gap, index) => (
-              <motion.div key={gap.title} {...reveal} transition={{ duration: 0.5, delay: index * 0.1 }}>
+              <div key={gap.title}>
                 <Card className="h-full">
                   <CardHeader>
-                    <span className="font-mono-label text-xs text-primary">{String(index + 1).padStart(2, "0")}</span>
                     <CardTitle className="text-xl">{gap.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600">{gap.text}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
           <p className="mx-auto mt-12 max-w-2xl text-center text-lg text-gray-700">
@@ -338,7 +295,7 @@ export default function ChironisPage() {
       <section id="how-it-works" className="scroll-mt-24 py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <Heading kicker="How it works" title="One loop," accent="five stages" />
+            <Heading title="One loop, five stages" />
             <p className="mt-4 text-lg text-muted-foreground">
               Listen, size, assess, build and prove in one place, so the evidence, the business case and
               the benefit record never disagree.
@@ -346,10 +303,10 @@ export default function ChironisPage() {
           </div>
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {stages.map((stage, index) => (
-              <motion.div key={stage.title} {...reveal} transition={{ duration: 0.5, delay: index * 0.08 }}>
+              <div key={stage.title}>
                 <Card className="h-full">
                   <CardHeader>
-                    <span className="font-mono-label text-xs text-primary">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="text-sm font-semibold tabular-nums text-primary">{String(index + 1).padStart(2, "0")}</span>
                     <CardTitle className="text-xl">{stage.title}</CardTitle>
                     <p className="pt-1 font-medium text-gray-900">{stage.line}</p>
                   </CardHeader>
@@ -357,7 +314,7 @@ export default function ChironisPage() {
                     <p className="text-sm text-gray-600">{stage.text}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
           <p className="mt-12 text-center text-lg text-gray-700">
@@ -371,18 +328,18 @@ export default function ChironisPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <motion.div {...reveal}>
-              <Heading kicker="01 · Listen" title="Three levels of" accent="listening" />
+            <div>
+              <Heading stage="Listen" title="Three levels of listening" />
               <div className="mt-8 space-y-4">
                 {listening.map((level, index) => (
                   <div key={level.title} className="rounded-lg border bg-white p-5">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="mono-label text-[11px] text-primary">Level {index + 1}</p>
+                        <p className="micro-label text-primary">Level {index + 1}</p>
                         <p className="mt-1 text-lg font-semibold text-gray-900">{level.title}</p>
                       </div>
                       <span
-                        className={`mono-label rounded-full px-3 py-1 text-[11px] ${
+                        className={`micro-label rounded-full px-3 py-1 text-[11px] ${
                           level.live ? "bg-primary-50 text-primary-800" : "bg-amber-50 text-amber-800"
                         }`}
                       >
@@ -396,13 +353,13 @@ export default function ChironisPage() {
               <p className="mt-6 text-gray-700">
                 And a short survey for everyone, broken down only for groups of five or more.
               </p>
-            </motion.div>
-            <motion.div {...reveal} transition={{ duration: 0.5, delay: 0.1 }}>
+            </div>
+            <div>
               <Screenshot
                 src="/assets/images/chironis/map-from-interview.webp"
                 alt="A BPMN process map in Chironis, generated from a workshop recording and waiting for review"
               />
-            </motion.div>
+            </div>
           </div>
 
           <div className="mt-20">
@@ -411,17 +368,15 @@ export default function ChironisPage() {
             </h3>
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {mapSteps.map((step, index) => (
-                <motion.div
+                <div
                   key={step.k}
-                  {...reveal}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
                   className={`rounded-lg border p-5 ${index === mapSteps.length - 1 ? "border-0 bg-ink text-white" : "bg-white"}`}
                 >
-                  <p className={`mono-label text-[11px] ${index === mapSteps.length - 1 ? "text-primary-400" : "text-primary"}`}>
+                  <p className={`micro-label ${index === mapSteps.length - 1 ? "text-primary-400" : "text-primary"}`}>
                     {String(index + 1).padStart(2, "0")} · {step.k}
                   </p>
                   <p className={`mt-2 ${index === mapSteps.length - 1 ? "text-slate-300" : "text-gray-600"}`}>{step.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -441,19 +396,19 @@ export default function ChironisPage() {
       {/* 02 Size */}
       <section className="py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="02 · Size" title="Every number" accent="shows its working" />
+          <Heading stage="Size" title="Every number shows its working" />
           <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
-            <motion.div {...reveal} className="rounded-lg bg-ink p-8 text-white">
-              <p className="mono-label text-primary-400">The arithmetic</p>
+            <div className="rounded-lg bg-ink p-8 text-white">
+              <p className="micro-label text-primary-400">The arithmetic</p>
               <pre className="mt-5 overflow-x-auto font-mono-label text-sm leading-8 text-slate-100">
                 {arithmetic.join("\n")}
               </pre>
               <p className="mt-5 text-sm text-slate-400">
                 Pay is valued by role band, never by person, and salaries never reach an AI.
               </p>
-            </motion.div>
-            <motion.div {...reveal} transition={{ duration: 0.5, delay: 0.1 }}>
-              <p className="mono-label mb-3 text-primary">Every figure carries a grade</p>
+            </div>
+            <div>
+              <p className="micro-label mb-3 text-primary">Every figure carries a grade</p>
               <div className="overflow-hidden rounded-lg border bg-white">
                 <table className="w-full text-left">
                   <thead className="bg-[#F1F5F4] text-sm text-gray-900">
@@ -476,33 +431,32 @@ export default function ChironisPage() {
                 Three kinds of value, <strong className="text-gray-900">time freed, cash and wider value</strong>,
                 are never added together.
               </p>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div {...reveal} className="mt-8 rounded-lg bg-primary-700 p-8 text-white sm:p-10">
-            <p className="mono-label text-primary-100">{"// The rule we never break"}</p>
+          <div className="mt-8 rounded-lg bg-primary-700 p-8 text-white sm:p-10">
             <p className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Capacity is never reported as cash.</p>
             <p className="mt-4 max-w-3xl text-primary-50">
               Time freed becomes cash only when it is redeployed or a role isn’t refilled. Until then it is
               shown as capacity, with its grade beside it, and nobody’s board pack says otherwise.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div {...reveal} className="mx-auto mt-16 max-w-5xl">
+          <div className="mx-auto mt-16 max-w-5xl">
             <Screenshot
               src="/assets/images/chironis/opportunities.webp"
               alt="Chironis opportunities view ranking automation candidates by FTE returned, value, build days and payback"
             />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* 03 Assess */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="03 · Assess" title="What AI can do here," accent="and if it’s wrong" />
+          <Heading stage="Assess" title="What AI can do here, and if it’s wrong" />
           <div className="mt-12 grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
-            <motion.div {...reveal}>
+            <div>
               <p className="text-6xl font-extrabold tracking-tight text-primary">24</p>
               <p className="mt-2 text-lg text-gray-900">
                 kinds of AI work in seven families, each rated for OpenAI, Claude and Gemini.
@@ -511,7 +465,7 @@ export default function ChironisPage() {
                 Default error rates are marked Estimated until your own tests replace them.
               </p>
 
-              <p className="mono-label mt-10 mb-3 text-primary">Error risk sets the ceiling</p>
+              <p className="micro-label mt-10 mb-3 text-primary">Error risk sets the ceiling</p>
               <div className="overflow-x-auto rounded-lg border bg-white">
                 <table className="w-full text-left">
                   <thead className="bg-[#F1F5F4] text-sm text-gray-900">
@@ -536,28 +490,25 @@ export default function ChironisPage() {
                 A decision about a person is never rated below High. The expected cost of errors sits beside
                 the benefit, never subtracted from it.
               </p>
-            </motion.div>
-            <motion.div {...reveal} transition={{ duration: 0.5, delay: 0.1 }}>
+            </div>
+            <div>
               <Screenshot
                 src="/assets/images/chironis/assessment.webp"
                 alt="A Chironis assessment suggesting automation for a claims process, with route, complexity, build days and rationale"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 04 Build */}
       <section className="relative bg-ink dot-grid-dark py-20">
-        <div className="hairline-gradient-center absolute inset-x-0 top-0" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="04 · Build" title="Agents" accent="earn their autonomy" dark />
+          <Heading stage="Build" title="Agents earn their autonomy" dark />
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {buildSteps.map((step, index) => (
-              <motion.div
+              <div
                 key={step.title}
-                {...reveal}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
                 className={`rounded-lg border p-5 ${
                   index === buildSteps.length - 1
                     ? "border-primary-400/40 bg-primary-900/40"
@@ -566,7 +517,7 @@ export default function ChironisPage() {
               >
                 <p className="font-semibold text-white">{step.title}</p>
                 <p className="mt-2 text-sm text-slate-400">{step.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -577,11 +528,11 @@ export default function ChironisPage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 max-w-[70ch] text-slate-300">
+          <p className="mt-6 max-w-xl text-slate-300">
             Up a rung only on clean live cases and your approval. Down automatically when errors rise, or
             when the model, prompt or tools change.
           </p>
-          <p className="mt-4 max-w-[70ch] text-slate-400">
+          <p className="mt-4 max-w-xl text-slate-400">
             Agents can be built anywhere (Claude Agent SDK, OpenAI Agents SDK, Google ADK, Power Automate,
             n8n) and report every case to Chironis.
           </p>
@@ -591,28 +542,26 @@ export default function ChironisPage() {
       {/* 05 Prove */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="05 · Prove" title="Built isn’t delivered." accent="Every case is counted." />
+          <Heading stage="Prove" title="Built isn’t delivered. Every case is counted." />
           <div className="mt-12 grid grid-cols-1 items-start gap-12 lg:grid-cols-[3fr_2fr]">
             <ol className="space-y-6">
               {proof.map((item, index) => (
-                <motion.li
+                <li
                   key={item.title}
-                  {...reveal}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
                   className="flex gap-5"
                 >
-                  <span className="font-mono-label pt-0.5 text-sm text-primary">
+                  <span className="pt-0.5 text-sm font-semibold tabular-nums text-primary">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
                     <p className="text-lg font-semibold text-gray-900">{item.title}</p>
                     <p className="mt-1 text-gray-600">{item.text}</p>
                   </div>
-                </motion.li>
+                </li>
               ))}
             </ol>
-            <motion.div {...reveal} transition={{ duration: 0.5, delay: 0.1 }} className="rounded-lg bg-ink p-8">
-              <p className="mono-label text-primary-400">The board pack</p>
+            <div className="rounded-lg bg-ink p-8">
+              <p className="micro-label text-primary-400">The board pack</p>
               <ul className="mt-5 space-y-3">
                 {boardPack.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-slate-200">
@@ -625,7 +574,7 @@ export default function ChironisPage() {
                 Everything comes out of the same record, so the deck, the workbook and the business case
                 never disagree.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -633,10 +582,10 @@ export default function ChironisPage() {
       {/* Trust */}
       <section className="py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="Trust" title="Built to be trusted" accent="with how you work" />
+          <Heading title="Built to be trusted with how you work" />
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {trust.map((item, index) => (
-              <motion.div key={item.title} {...reveal} transition={{ duration: 0.5, delay: index * 0.06 }}>
+              <div key={item.title}>
                 <Card className="h-full">
                   <CardHeader>
                     <CardTitle className="text-lg">{item.title}</CardTitle>
@@ -645,17 +594,17 @@ export default function ChironisPage() {
                     <p className="text-gray-600">{item.text}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
-          <motion.div {...reveal} className="mt-8 rounded-lg border bg-white p-6 sm:p-8">
-            <p className="mono-label text-primary">Built on AWS</p>
-            <p className="mt-3 text-gray-700">
+          <div className="mt-8 rounded-lg border bg-white p-6 sm:p-8">
+            <p className="micro-label text-primary">Built on AWS</p>
+            <p className="mt-3 max-w-[36rem] text-gray-700">
               Chironis runs in AWS London (eu-west-2) on ECS Fargate, RDS for PostgreSQL, S3, KMS, WAF, SES
               and CloudTrail, provisioned with Terraform. Each client’s data is isolated in the database
               itself, and the database and files are encrypted with keys held in KMS.
             </p>
-          </motion.div>
+          </div>
           <p className="mt-6 text-sm text-gray-600">
             On the way: single sign-on, UK-only AI processing, SOC 2 and ISO 27001.
           </p>
@@ -665,15 +614,15 @@ export default function ChironisPage() {
       {/* The engagement */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading kicker="The engagement" title="Assess, build, run:" accent="you decide at every gate" />
+          <Heading title="Assess, build, run: you decide at every gate" />
           <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
             {phases.map((phase, index) => {
               const dark = index === phases.length - 1
               return (
-                <motion.div key={phase.title} {...reveal} transition={{ duration: 0.5, delay: index * 0.1 }}>
-                  <Card className={`h-full ${dark ? "before:hidden border-0 bg-ink text-white" : ""}`}>
+                <div key={phase.title}>
+                  <Card className={`h-full ${dark ? "border-0 bg-ink text-white" : ""}`}>
                     <CardHeader>
-                      <p className={`mono-label text-[11px] ${dark ? "text-primary-400" : "text-primary"}`}>
+                      <p className={`micro-label ${dark ? "text-primary-400" : "text-primary"}`}>
                         {phase.kicker}
                       </p>
                       <CardTitle className={`pt-1 text-2xl ${dark ? "text-white" : ""}`}>{phase.title}</CardTitle>
@@ -681,16 +630,16 @@ export default function ChironisPage() {
                     </CardHeader>
                     <CardContent className={`space-y-4 border-t pt-5 ${dark ? "border-white/10" : ""}`}>
                       <div>
-                        <p className={`mono-label text-[11px] ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You get</p>
+                        <p className={`micro-label ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You get</p>
                         <p className={`mt-1 ${dark ? "text-white" : "text-gray-900"}`}>{phase.get}</p>
                       </div>
                       <div>
-                        <p className={`mono-label text-[11px] ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You decide</p>
+                        <p className={`micro-label ${dark ? "text-slate-400" : "text-muted-foreground"}`}>You decide</p>
                         <p className={`mt-1 ${dark ? "text-white" : "text-gray-900"}`}>{phase.decide}</p>
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -699,16 +648,13 @@ export default function ChironisPage() {
 
       {/* CTA */}
       <section className="relative bg-ink dot-grid-dark py-20">
-        <div className="hairline-gradient-center absolute inset-x-0 top-0" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div {...reveal} className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <div className="flex justify-center">
               <ChironisWordmark markSize={34} className="text-[24px] text-white" />
             </div>
-            <p className="mono-label mt-10 mb-4 text-primary-400">{"// The first step"}</p>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
-              Start with four weeks.{" "}
-              <span className="serif-accent text-primary-400 text-[1.1em]">Then decide what to build.</span>
+              Start with four weeks. Then decide what to build.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
               A fixed-fee roadmap assessment, run on Chironis by one forward-deployed engineer. You keep the
@@ -722,7 +668,7 @@ export default function ChironisPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

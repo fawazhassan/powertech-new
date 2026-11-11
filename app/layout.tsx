@@ -1,17 +1,11 @@
 import type { Metadata } from "next"
-import { Inter, Instrument_Serif, IBM_Plex_Mono, Manrope } from "next/font/google"
+import { Schibsted_Grotesk, IBM_Plex_Mono, Manrope } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Script from "next/script"
 
-const inter = Inter({ subsets: ["latin"] })
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: "italic",
-  variable: "--font-serif-accent",
-})
+const schibsted = Schibsted_Grotesk({ subsets: ["latin"] })
 const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
@@ -110,7 +104,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} ${instrumentSerif.variable} ${plexMono.variable} ${manrope.variable}`}>
+      <body className={`${schibsted.className} ${plexMono.variable} ${manrope.variable}`}>
         <Script
           id="organization-schema"
           type="application/ld+json"

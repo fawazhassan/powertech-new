@@ -8,10 +8,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      // Lumina card: hairline-topped (2px emerald→indigo keyline), inner
-      // light, lift + emerald border on hover. Override the keyline with
-      // `before:hidden` on colored/gradient cards.
-      "relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-[inset_0_1px_0_#FFFFFF,0_1px_2px_rgba(15,23,42,0.05)] before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:bg-gradient-to-r before:from-[#047857] before:to-[#4F46E5] before:content-[''] transition-all duration-200 hover:-translate-y-[3px] hover:border-primary/35 hover:shadow-[0_12px_32px_rgba(15,23,42,0.1)]",
+      "relative overflow-hidden rounded-lg border bg-card text-card-foreground shadow-[0_1px_2px_rgba(15,23,42,0.05)]",
       className
     )}
     {...props}

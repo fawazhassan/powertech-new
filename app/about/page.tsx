@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Image from "next/image"
 import { Target, Eye, Award, Users2, Linkedin } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -53,10 +52,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[#f5f7fd] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-3xl text-center"
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -66,7 +62,7 @@ export default function AboutPage() {
               UK-based innovators re-defining what good digital transformation should look like in
               the golden age of AI.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -78,25 +74,21 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full">
                   <CardHeader>
-                    <div className="mb-4 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <value.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl">{value.title}</CardTitle>
+                    <CardTitle className="flex items-center gap-3 text-xl">
+                      <value.icon className="h-5 w-5 text-primary" />
+                      {value.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600">{value.description}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -105,52 +97,40 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       <section className="py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-3xl text-center mb-12"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
               Why Choose PowerTech Digital?
             </h2>
-            <p className="mx-auto max-w-[65ch] text-lg leading-8 text-gray-600 text-left">
+            <p className="mx-auto max-w-xl text-lg leading-8 text-gray-600 text-left">
               At PowerTech Digital, we're innovators at the forefront of AI and Low-Code technology.
               We bring extensive experience in building Power Platform solutions for both FTSE 100
               companies and medium sized business. Our expertise in governance, delivery, and design
               authority services ensures that your solutions will utilise the suitable, most
               up-to-date, secure, scalable, and aligned with your business objectives.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Leadership */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Leadership
             </h2>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="mx-auto max-w-4xl"
           >
             <Card className="overflow-hidden border-2">
               <div className="md:flex">
-                <div className="md:flex-shrink-0 md:w-1/3 bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-8">
+                <div className="md:flex-shrink-0 md:w-1/3 bg-primary-50 flex items-center justify-center p-8">
                   <div className="relative w-48 h-48 rounded-full border-4 border-white shadow-xl overflow-hidden">
                     <Image
                       src="/assets/images/fawaz-profile.jpeg"
@@ -194,7 +174,7 @@ export default function AboutPage() {
               </div>
 
               <div className="p-8 bg-gray-50 border-t">
-                <div className="mx-auto max-w-[70ch] text-gray-600 leading-7 space-y-4">
+                <div className="mx-auto max-w-[34rem] text-gray-600 leading-7 space-y-4">
                   <p>
                     Fawaz Hassan is a versatile technology leader and CEO of PowerTech Digital, with
                     a career spanning the full spectrum of digital transformation and software
@@ -280,7 +260,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </Card>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

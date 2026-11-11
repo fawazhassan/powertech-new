@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
 import {
   Brain,
   Code2,
@@ -29,7 +28,6 @@ export default function CustomSolutionsPage() {
         "Recommendation Systems",
         "Custom ML Model Development",
       ],
-      color: "from-[#6577F3] to-[#9333ea]",
     },
     {
       icon: Globe,
@@ -42,7 +40,6 @@ export default function CustomSolutionsPage() {
         "Content Management Systems",
         "Real-time Collaboration Tools",
       ],
-      color: "from-[#10b981] to-[#0FADCF]",
     },
     {
       icon: Smartphone,
@@ -55,7 +52,6 @@ export default function CustomSolutionsPage() {
         "Mobile-first Design",
         "App Store Optimization",
       ],
-      color: "from-[#10b981] to-[#059669]",
     },
     {
       icon: Cloud,
@@ -68,7 +64,6 @@ export default function CustomSolutionsPage() {
         "DevOps & CI/CD",
         "Cloud Migration Services",
       ],
-      color: "from-[#259ae6] to-[#0FADCF]",
     },
   ]
 
@@ -115,10 +110,7 @@ export default function CustomSolutionsPage() {
       {/* Hero Section */}
       <section className="bg-[#f5f7fd] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-3xl text-center"
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -140,18 +132,14 @@ export default function CustomSolutionsPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -160,25 +148,19 @@ export default function CustomSolutionsPage() {
             <p className="mt-4 text-lg text-gray-600">
               Comprehensive solutions leveraging the latest technologies
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all group">
+                <Card className="h-full">
                   <CardHeader>
-                    <div
-                      className={`mb-4 w-12 h-12 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
-                    >
-                      <service.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <CardTitle className="flex items-center gap-3 text-xl">
+                      <service.icon className="h-5 w-5 text-primary" />
+                      {service.title}
+                    </CardTitle>
                     <CardDescription>{service.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -192,7 +174,7 @@ export default function CustomSolutionsPage() {
                     </ul>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -201,11 +183,7 @@ export default function CustomSolutionsPage() {
       {/* Technologies */}
       <section className="py-20 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -214,24 +192,20 @@ export default function CustomSolutionsPage() {
             <p className="mt-4 text-lg text-gray-600">
               We leverage modern, battle-tested technologies to build robust solutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
               >
-                <Card className="text-center hover:shadow-lg transition-all cursor-pointer">
+                <Card className="text-center">
                   <CardContent className="pt-6">
                     <tech.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
                     <p className="font-semibold text-gray-900">{tech.name}</p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -240,11 +214,7 @@ export default function CustomSolutionsPage() {
       {/* Process */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -253,23 +223,19 @@ export default function CustomSolutionsPage() {
             <p className="mt-4 text-lg text-gray-600">
               A proven methodology that delivers results
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item, index) => (
-              <motion.div
+              <div
                 key={item.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="relative">
-                  <div className="font-mono-label text-6xl font-medium text-slate-500 mb-4">{item.step}</div>
+                  <div className="mb-3 text-2xl font-bold tabular-nums text-primary">{item.step}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -279,12 +245,7 @@ export default function CustomSolutionsPage() {
       <section className="py-20 bg-[#f5f7fd]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
+            <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
                 Security & Quality First
               </h2>
@@ -301,27 +262,18 @@ export default function CustomSolutionsPage() {
                   "Regular security audits",
                   "Comprehensive documentation",
                 ].map((item, index) => (
-                  <motion.div
+                  <div
                     key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
                     className="flex items-center gap-3"
                   >
                     <Lock className="h-5 w-5 text-green-600 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
+            <div>
               <Card className="bg-white border-2">
                 <CardHeader>
                   <CardTitle className="text-2xl">Ready to Build Something Amazing?</CardTitle>
@@ -341,7 +293,7 @@ export default function CustomSolutionsPage() {
                   </Link>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

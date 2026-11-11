@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { ExternalLink, CheckCircle, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -16,7 +15,6 @@ export default function ProductsPage() {
       description:
         "AI automation analysts at scale. Chironis does the heavy lifting of process analysis across a whole organisation: it runs AI interviews and reads workshop recordings, drafts every process map, sizes where AI pays with graded evidence, and counts every case each automation handles. It is the platform behind our AI & Automation Roadmap Assessment.",
       logo: "/assets/images/chironis-logo.svg",
-      color: "from-[#0F172A] to-[#064E3B]",
       features: [
         "Process analysis across every team at once, by AI interview",
         "Process maps (BPMN 2.0) drafted from what people said",
@@ -32,7 +30,6 @@ export default function ProductsPage() {
       description:
         "Stop losing top talent to lengthy hiring processes and inconsistent candidate evaluations. Our intelligent platform combines data-driven CV screening, AI-powered interviews, and talent validation to help you build exceptional teams faster and more confidently.",
       logo: "/assets/images/voxle-logo.png",
-      color: "from-[#7c3aed] to-[#6d28d9]",
       features: [
         "Intelligent CV Analysis with line-by-line scoring",
         "AI Content Detection (95% accuracy)",
@@ -48,7 +45,6 @@ export default function ProductsPage() {
       description:
         "Transform empty rooms into beautifully staged spaces that sell faster and for more. AI-powered virtual staging in under 60 seconds with MLS-acceptable results.",
       logo: "/assets/images/stagently-logo.png",
-      color: "from-[#d13976] to-[#a82d5e]",
       features: [
         "AI virtual staging in seconds",
         "Multiple staging style options",
@@ -64,10 +60,7 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="bg-[#f5f7fd] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-3xl text-center"
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -78,7 +71,7 @@ export default function ProductsPage() {
               challenges. Each product showcases our commitment to excellence in software
               development and user experience.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -87,12 +80,8 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="space-y-24">
             {products.map((product, index) => (
-              <motion.div
+              <div
                 key={product.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
               >
                 <div
                   className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
@@ -101,12 +90,8 @@ export default function ProductsPage() {
                 >
                   {/* Content */}
                   <div className={index % 2 !== 0 ? "lg:order-2" : ""}>
-                    <div
-                      className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r ${product.color} text-white text-sm font-medium mb-4`}
-                    >
-                      <span>{product.tagline}</span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">{product.name}</h2>
+                    <p className="mt-2 mb-4 text-lg font-semibold text-primary">{product.tagline}</p>
                     <p className="text-lg text-gray-600 mb-6">{product.description}</p>
 
                     {/* Features */}
@@ -142,11 +127,9 @@ export default function ProductsPage() {
 
                   {/* Product Showcase Card */}
                   <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
-                    <Card
-                      className={`before:hidden bg-gradient-to-br ${product.color} text-white border-0 shadow-2xl`}
-                    >
+                    <Card className="bg-background">
                       <CardHeader>
-                        <div className="w-32 h-32 mx-auto rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center mb-4 p-4">
+                        <div className="w-32 h-32 mx-auto rounded-2xl border bg-white flex items-center justify-center mb-4 p-4">
                           <div className="relative w-full h-full">
                             <Image
                               src={product.logo}
@@ -156,10 +139,10 @@ export default function ProductsPage() {
                             />
                           </div>
                         </div>
-                        <CardTitle className="text-2xl text-white text-center">
+                        <CardTitle className="text-2xl text-center">
                           {product.name}
                         </CardTitle>
-                        <CardDescription className="text-white text-center">
+                        <CardDescription className="text-center">
                           {product.tagline}
                         </CardDescription>
                       </CardHeader>
@@ -183,7 +166,7 @@ export default function ProductsPage() {
                     </Card>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -192,11 +175,7 @@ export default function ProductsPage() {
       {/* Technology Section */}
       <section className="py-20 bg-[#f9fafb]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center mb-12"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -206,7 +185,7 @@ export default function ProductsPage() {
               Our products leverage the same technologies and expertise we bring to client
               projects
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -223,12 +202,8 @@ export default function ProductsPage() {
                 description: "Built with React, Next.js, and cutting-edge frameworks",
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full text-center">
                   <CardHeader>
@@ -236,7 +211,7 @@ export default function ProductsPage() {
                     <CardDescription>{item.description}</CardDescription>
                   </CardHeader>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -245,11 +220,7 @@ export default function ProductsPage() {
       {/* CTA Section */}
       <section className="relative bg-ink dot-grid-dark py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -275,7 +246,7 @@ export default function ProductsPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

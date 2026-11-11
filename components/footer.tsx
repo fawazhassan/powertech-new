@@ -3,8 +3,7 @@ import { Mail, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-white">
-      <div className="hairline-gradient-center" />
+    <footer className="border-t border-white/10 bg-ink text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -26,7 +25,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mono-label text-slate-400 mb-4">Services</h4>
+            <h4 className="micro-label text-slate-400 mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/chironis" className="text-gray-400 hover:text-white transition-colors">
@@ -43,7 +42,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="mono-label text-slate-400 mb-4">Company</h4>
+            <h4 className="micro-label text-slate-400 mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">

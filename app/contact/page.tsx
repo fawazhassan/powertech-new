@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Mail, Linkedin, MapPin, Phone } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -11,10 +10,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-[#f5f7fd] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="mx-auto max-w-3xl text-center"
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -24,7 +20,7 @@ export default function ContactPage() {
               Ready to start your project? Have questions about our services? We'd love to hear
               from you.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -33,11 +29,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <p className="text-gray-600 mb-8">
                 Whether you want to explore Chironis, custom software development, or want to
@@ -71,8 +63,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-[11px] bg-indigo-50 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 rounded-[11px] bg-primary-50 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
@@ -94,13 +86,10 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Contact Cards */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
               className="space-y-6"
             >
               <Card>
@@ -159,7 +148,7 @@ export default function ContactPage() {
                   </Button>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
